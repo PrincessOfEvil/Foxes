@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<FactionDef ParentName="PlayerFactionBase">
+		<defName>Zenko_PlayerColony</defName>
+		<label>New Arrivals (Zenko)</label>
+		<description>A colony of recently-arrived off-worlders.</description>
+
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>Zenko_Colonist</basicMemberKind>
+		<pawnSingular>colonist</pawnSingular>
+		<pawnsPlural>colonists</pawnsPlural>
+
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<allowedCultures><li>Astropolitan</li></allowedCultures>
+		<factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+		<geneticVariance>1</geneticVariance>
+
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Offworld</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+
+
+		<techLevel>Industrial</techLevel>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+		</startingResearchTags>
+		<startingTechprintsResearchTags>
+			<li>ClassicStart</li>
+			<li>ClassicStartTechprints</li>
+		</startingTechprintsResearchTags>
+
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Synthread</li>
+			</thingDefs>
+		</apparelStuffFilter>
+	</FactionDef>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>Zenko_Colonist</defName>
+		<label>Colonist</label>
+		<race>Zenko_Race</race>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<chemicalAddictionChance>0.06</chemicalAddictionChance>
+		<apparelTags>
+			<li>IndustrialBasic</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney>350~600</apparelMoney>
+		<specificApparelRequirements>
+			<li Class="Zenko.SpecificApparelRequirement_HairColored">
+				<stuff>Leather_Fox</stuff>
+			</li>
+		</specificApparelRequirements>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+
+		<fixedGender>Female</fixedGender>
+		<allowOldAgeInjuries>false</allowOldAgeInjuries>
+	</PawnKindDef>
+	
+	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
+		<defName>Zenko_Race</defName>
+		<label>zenko</label>
+		<description>Zenko are a race related to the Revia. However, instead of draining the blood of their enemies, they collect finer energies.</description>
+		
+		<statBases>
+			<MoveSpeed>5.2</MoveSpeed>
+			<PawnBeauty>0.5</PawnBeauty>
+			<ComfyTemperatureMin>12</ComfyTemperatureMin>
+			<ComfyTemperatureMax>24</ComfyTemperatureMax>
+		</statBases>
+		<race>
+			<lifeExpectancy>1200</lifeExpectancy>
+			<ageGenerationCurve>
+				<points>
+					<li>(14,   0)</li>
+					<li>(16,   100)</li>
+					<li>(250,  100)</li>
+					<li>(350,  30)</li>
+					<li>(500,  18)</li>
+					<li>(650,  10)</li>
+					<li>(900,  3)</li>
+					<li>(1000, 0)</li>
+				</points>
+			</ageGenerationCurve>
+			<hediffGiverSets>
+				<li>ZenkoStandardAtlas</li>
+			</hediffGiverSets>
+			<baseHealthScale>0.8</baseHealthScale>
+		</race>
+		<tools>
+			<li>
+		        <label>left claw</label>
+		        <capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>12.4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+		        <label>right claw</label>
+		        <capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>12.4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>12.4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.07</chanceFactor>
+				<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+				<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+
+		<alienRace>
+			<generalSettings>
+				<maleGenderProbability>0</maleGenderProbability>
+				<immuneToAge>true</immuneToAge>
+
+				<lovinIntervalHoursFromAge>
+					<points>
+						<li>(16,   1.5)</li>
+						<li>(300,  1.5)</li>
+						<li>(900,  4)</li>
+						<li>(1200, 12)</li>
+						<li>(1500, 36)</li>
+					</points>
+				</lovinIntervalHoursFromAge>
+
+				<allowHumanBios>true</allowHumanBios>
+				<humanRecipeImport>true</humanRecipeImport>
+				<notXenophobistTowards>
+					<li>Human</li>
+				</notXenophobistTowards>
+
+				<alienPartGenerator>
+					<getsGreyAt>1500</getsGreyAt>
+					<bodyAddons>
+						<li>
+							<!-- Tail 0+ -->
+							<path>Zenko_tail</path>
+							<colorChannel>hair</colorChannel>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>false</drawnInBed>
+							<drawSize>(1.2,1.2)</drawSize>
+							<shaderType>CutoutComplex</shaderType>
+							<offsets>
+								<north Class="Zenko.RotationOffset">
+									<!-- 180 - 69 -->
+									<angle>111</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</north>
+								<south Class="Zenko.RotationOffset">
+									<angle>111</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</south>
+								<east Class="Zenko.RotationOffset">
+									<offset>( 0.22,	-0.33)</offset>
+								</east>
+							</offsets>
+						</li>
+						<li Class="Zenko.BodyAddon">
+							<!-- Tail 100+ -->
+							<path>Zenko_tail</path>
+							<colorChannel>hair</colorChannel>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>false</drawnInBed>
+							<drawSize>(1.2,1.2)</drawSize>
+							<shaderType>CutoutComplex</shaderType>
+							<minAge>100</minAge>
+							<offsets>
+								<north Class="Zenko.RotationOffset">
+									<!-- 111 - 27-->
+									<angle>84</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</north>
+								<south Class="Zenko.RotationOffset">
+									<angle>84</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</south>
+								<west Class="Zenko.RotationOffset">
+									<angle>-72</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</west>
+								<east Class="Zenko.RotationOffset">
+									<angle> 72</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</east>
+							</offsets>
+						</li>
+						<li Class="Zenko.BodyAddon">
+							<!-- Tail 200+ -->
+							<path>Zenko_tail</path>
+							<colorChannel>hair</colorChannel>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>false</drawnInBed>
+							<drawSize>(1.2,1.2)</drawSize>
+							<shaderType>CutoutComplex</shaderType>
+							<minAge>200</minAge>
+							<offsets>
+								<north Class="Zenko.RotationOffset">
+									<!-- 111 + 27-->
+									<angle>138</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</north>
+								<south Class="Zenko.RotationOffset">
+									<angle>138</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</south>
+								<west Class="Zenko.RotationOffset">
+									<angle>-36</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</west>
+								<east Class="Zenko.RotationOffset">
+									<angle> 36</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</east>
+							</offsets>
+						</li>
+						<li Class="Zenko.BodyAddon">
+							<!-- Tail 300+ -->
+							<path>Zenko_tail</path>
+							<colorChannel>hair</colorChannel>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>false</drawnInBed>
+							<drawSize>(1.2,1.2)</drawSize>
+							<shaderType>CutoutComplex</shaderType>
+							<minAge>300</minAge>
+							<offsets>
+								<north Class="Zenko.RotationOffset">
+									<!-- 111 - 27 * 2-->
+									<angle>57</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</north>
+								<south Class="Zenko.RotationOffset">
+									<angle>57</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</south>
+								<west Class="Zenko.RotationOffset">
+									<angle>-96</angle>
+									<offset>( 0.22, -0.33)</offset>
+								</west>
+								<east Class="Zenko.RotationOffset">
+									<angle> 96</angle>
+									<offset>( 0.22, -0.33)</offset>
+								</east>
+							</offsets>
+						</li>
+						<li Class="Zenko.BodyAddon">
+							<!-- Tail 400+ -->
+							<path>Zenko_tail</path>
+							<colorChannel>hair</colorChannel>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>false</drawnInBed>
+							<drawSize>(1.2,1.2)</drawSize>
+							<shaderType>CutoutComplex</shaderType>
+							<minAge>400</minAge>
+							<offsets>
+								<north Class="Zenko.RotationOffset">
+									<!-- 111 + 27 * 2-->
+									<angle>165</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</north>
+								<south Class="Zenko.RotationOffset">
+									<angle>165</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</south>
+								<west Class="Zenko.RotationOffset">
+									<angle>-24</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</west>
+								<east Class="Zenko.RotationOffset">
+									<angle> 24</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</east>
+							</offsets>
+						</li>
+						<li Class="Zenko.BodyAddon">
+							<!-- Tail 500+ -->
+							<path>Zenko_tail</path>
+							<colorChannel>hair</colorChannel>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>false</drawnInBed>
+							<drawSize>(1.2,1.2)</drawSize>
+							<shaderType>CutoutComplex</shaderType>
+							<minAge>500</minAge>
+							<offsets>
+								<north Class="Zenko.RotationOffset">
+									<!-- 111 - 27 * 3-->
+									<angle>30</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</north>
+								<south Class="Zenko.RotationOffset">
+									<angle>30</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</south>
+								<west Class="Zenko.RotationOffset">
+									<angle>-48</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</west>
+								<east Class="Zenko.RotationOffset">
+									<angle> 48</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</east>
+							</offsets>
+						</li>
+						<li Class="Zenko.BodyAddon">
+							<!-- Tail 600+ -->
+							<path>Zenko_tail</path>
+							<colorChannel>hair</colorChannel>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>false</drawnInBed>
+							<drawSize>(1.2,1.2)</drawSize>
+							<shaderType>CutoutComplex</shaderType>
+							<minAge>600</minAge>
+							<offsets>
+								<north Class="Zenko.RotationOffset">
+									<!-- 111 + 27 * 3-->
+									<angle>192</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</north>
+								<south Class="Zenko.RotationOffset">
+									<angle>192</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</south>
+								<west Class="Zenko.RotationOffset">
+									<angle>-12</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</west>
+								<east Class="Zenko.RotationOffset">
+									<angle> 12</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</east>
+							</offsets>
+						</li>
+						<li Class="Zenko.BodyAddon">
+							<!-- Tail 700+ -->
+							<path>Zenko_tail</path>
+							<colorChannel>hair</colorChannel>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>false</drawnInBed>
+							<drawSize>(1.2,1.2)</drawSize>
+							<shaderType>CutoutComplex</shaderType>
+							<minAge>700</minAge>
+							<offsets>
+								<north Class="Zenko.RotationOffset">
+									<!-- 111 - 27 * 4-->
+									<angle>3</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</north>
+								<south Class="Zenko.RotationOffset">
+									<angle>3</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</south>
+								<west Class="Zenko.RotationOffset">
+									<angle>-60</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</west>
+								<east Class="Zenko.RotationOffset">
+									<angle> 60</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</east>
+							</offsets>
+						</li>
+						<li Class="Zenko.BodyAddon">
+							<!-- Tail 800+ -->
+							<path>Zenko_tail</path>
+							<colorChannel>hair</colorChannel>
+							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+							<drawnInBed>false</drawnInBed>
+							<drawSize>(1.2,1.2)</drawSize>
+							<shaderType>CutoutComplex</shaderType>
+							<minAge>800</minAge>
+							<offsets>
+								<north Class="Zenko.RotationOffset">
+									<!-- 111 + 27 * 4-->
+									<angle>219</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</north>
+								<south Class="Zenko.RotationOffset">
+									<angle>219</angle>
+									<offset>( 0.00, -0.33)</offset>
+								</south>
+								<west Class="Zenko.RotationOffset">
+									<angle>-84</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</west>
+								<east Class="Zenko.RotationOffset">
+									<angle> 84</angle>
+									<offset>( 0.22,	-0.33)</offset>
+								</east>
+							</offsets>
+						</li>
+					</bodyAddons>
+					<colorChannels Inherit="False">
+						<li>
+							<name>skin</name>
+							<first Class="AlienRace.ColorGenerator_SkinColorMelanin">
+								<minMelanin>0</minMelanin>
+								<maxMelanin>1</maxMelanin>
+							</first>
+							<second Class="AlienRace.ColorGenerator_CustomAlienChannel">
+								<colorChannel>skin_1</colorChannel>
+							</second>
+						</li>
+						<li>
+							<name>hair</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li><only>(233, 233, 233)</only></li> <!-- Arctic -->
+									<li><only>(178, 100,  34)</only></li> <!-- Red -->
+									<li><only>(70,   70,  70)</only></li> <!-- Red -->
+									<li><only>(202, 167, 106)</only></li> <!-- Fennec -->
+								</options>
+							</first>
+							<second Class="AlienRace.ColorGenerator_CustomAlienChannel">
+								<colorChannel>hair_1</colorChannel>
+							</second>
+						</li>
+					</colorChannels>
+				</alienPartGenerator>
+			</generalSettings>
+		</alienRace>
+		<modExtensions>
+			<li Class="Zenko.DefExtension_GainsPsyfocusFromLovin" MayRequire="Ludeon.RimWorld.Royalty" />
+		</modExtensions>
+	</AlienRace.ThingDef_AlienRace>
+</Defs>

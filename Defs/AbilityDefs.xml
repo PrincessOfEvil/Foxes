@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<AbilityDef>
+		<defName>Zenko_AbilityPsiShield</defName>
+		<label>illusory shield</label>
+		<description>A mix of skipshields, subtle mental commands and just luck. Psycosts are per point of damage. Click to switch on/off.</description>
+		<gizmoClass>Zenko.Command_ActuallyToggle</gizmoClass>
+		<iconPath>Zenko_PsiShield</iconPath>
+		<cooldownTicksRange>40~42</cooldownTicksRange>
+		<statBases>
+			<Ability_EntropyGain>1</Ability_EntropyGain>
+			<Ability_PsyfocusCost>0.001</Ability_PsyfocusCost>
+		</statBases>
+		<verbProperties><!-- Required, but unused -->
+			<verbClass>Verb_CastAbility</verbClass>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<sound>Deflect_General</sound>
+				<fleckDefs>
+					<li>MetaPuff</li>
+					<li>MicroSparksFast</li>
+				</fleckDefs>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>

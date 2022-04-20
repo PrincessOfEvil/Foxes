@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<PawnKindDef ParentName="RefugeeBase" MayRequire="Ludeon.RimWorld.Royalty">
+		<defName>Zenko_Refugee</defName>
+		<label>refugee</label>
+		<combatPower>40</combatPower>
+		<invNutrition>0</invNutrition>
+		<gearHealthRange>0.2~0.6</gearHealthRange>
+		<itemQuality>Poor</itemQuality>
+		<apparelMoney>90~280</apparelMoney>
+		<apparelAllowHeadgearChance>0.2</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>IndustrialBasic</li>
+		</apparelTags>
+		<specificApparelRequirements>
+			<li Class="Zenko.SpecificApparelRequirement_HairColored">
+				<stuff>Leather_Fox</stuff>
+			</li>
+		</specificApparelRequirements>
+		<weaponMoney>60~200</weaponMoney>
+		<weaponTags>
+			<li>MedievalMeleeBasic</li>
+			<li>NeolithicMeleeBasic</li>
+		</weaponTags>
+		<techHediffsMoney>50~50</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+		</techHediffsTags>
+		<techHediffsChance>0.15</techHediffsChance>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>30~70</countRange>
+				</li>
+				<li>
+					<thingDef>MedicineIndustrial</thingDef>
+					<countRange>1</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<initialWillRange>6~9</initialWillRange>
+		<initialResistanceRange>28~42</initialResistanceRange>
+	</PawnKindDef>
+	<PawnKindDef ParentName="SpaceRefugeeBase">
+		<defName>Zenko_SpaceRefugee</defName>
+		<label>space refugee</label>
+		<apparelMoney>0~1000</apparelMoney>
+		<specificApparelRequirements>
+			<li Class="Zenko.SpecificApparelRequirement_HairColored">
+				<stuff>Leather_Fox</stuff>
+			</li>
+		</specificApparelRequirements>
+		<initialWillRange>6~9</initialWillRange>
+		<initialResistanceRange>28~42</initialResistanceRange>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="OutlanderBase">
+		<defName>Zenko_Villager</defName>
+		<label>villager</label>
+		<combatPower>50</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<isFighter>false</isFighter>
+		<gearHealthRange>0.2~2.0</gearHealthRange>
+		<weaponTags>
+			<li>Gun</li>
+			<li>MedievalMeleeBasic</li>
+		</weaponTags>
+		<weaponMoney>65~250</weaponMoney>
+		<apparelMoney>200~400</apparelMoney>
+		<apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+		<specificApparelRequirements>
+			<li Class="Zenko.SpecificApparelRequirement_HairColored">
+				<stuff>Leather_Fox</stuff>
+			</li>
+		</specificApparelRequirements>
+		<techHediffsChance>0.06</techHediffsChance>
+		<techHediffsMoney>50~600</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Simple</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<initialWillRange>6~9</initialWillRange>
+		<initialResistanceRange>28~42</initialResistanceRange>
+	</PawnKindDef>
+
+	<AlienRace.RaceSettings>
+		<defName>Zenko_AlienRaceSettings</defName>
+		<pawnKindSettings>
+			<alienrefugeekinds>
+				<li MayRequire="Ludeon.RimWorld.Royalty">
+					<kindDefs>
+						<li>Zenko_Refugee</li>
+					</kindDefs>
+					<chance>0.5</chance>
+				</li>
+				<li>
+					<kindDefs>
+						<li>Zenko_SpaceRefugee</li>
+					</kindDefs>
+					<chance>0.5</chance>
+				</li>
+			</alienrefugeekinds>
+
+			<startingColonists>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>Zenko_Colonist</li>
+							</kindDefs>
+							<chance>0.5</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>PlayerColony</li> 
+						<li>PlayerTribe</li>
+					</factionDefs>
+				</li>
+			</startingColonists>
+			<alienwandererkinds>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>Zenko_Villager</li>
+							</kindDefs>
+						<chance>0.5</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>PlayerColony</li>
+						<li>PlayerTribe</li>
+					</factionDefs>
+				</li>
+			</alienwandererkinds>
+		</pawnKindSettings>
+	</AlienRace.RaceSettings>
+</Defs>

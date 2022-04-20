@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defName>Zenko_Age</defName>
+		<label>Zenko age</label>
+		<description>Changes to Zenko as they gain time and tails</description>
+		<comps>
+			<li Class="Zenko.HediffCompProperties_Age">
+				<compClass>Zenko.HediffComp_Age</compClass>
+				<ageDivisor>1000</ageDivisor>
+			</li>
+			<li Class="HediffCompProperties_GiveAbility" MayRequire="Ludeon.RimWorld.Royalty">
+				<abilityDef>Zenko_AbilityPsiShield</abilityDef>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0.0</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<statOffsets>
+					<PsychicSensitivity>0.1</PsychicSensitivity>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<statOffsets>
+					<PsychicSensitivity>0.25</PsychicSensitivity>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.2</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<statOffsets>
+					<PsychicSensitivity>0.4</PsychicSensitivity>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.3</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<statOffsets>
+					<PsychicSensitivity>0.65</PsychicSensitivity>
+					<MoveSpeed>-0.1</MoveSpeed>
+					<ComfyTemperatureMin>-1</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-0.5</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<statOffsets>
+					<PsychicSensitivity>1</PsychicSensitivity>
+					<MoveSpeed>-0.2</MoveSpeed>
+					<ComfyTemperatureMin>-2</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-1</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<statOffsets>
+					<PsychicSensitivity>1.25</PsychicSensitivity>
+					<MoveSpeed>-0.3</MoveSpeed>
+					<ComfyTemperatureMin>-3</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-1.5</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<statOffsets>
+					<PsychicSensitivity>1.5</PsychicSensitivity>
+					<MoveSpeed>-0.4</MoveSpeed>
+					<ComfyTemperatureMin>-4</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-2</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<statOffsets>
+					<PsychicSensitivity>2</PsychicSensitivity>
+					<MoveSpeed>-0.5</MoveSpeed>
+					<ComfyTemperatureMin>-5</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-2.5</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<becomeVisible>false</becomeVisible>
+				<statOffsets>
+					<PsychicSensitivity>3</PsychicSensitivity>
+					<MoveSpeed>-0.6</MoveSpeed>
+					<ComfyTemperatureMin>-6</ComfyTemperatureMin>
+					<ComfyTemperatureMax>-3</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffGiverSetDef>
+		<defName>ZenkoStandardAtlas</defName>
+		<hediffGivers>
+			<li Class="Zenko.HediffGiver_Zenko">
+				<hediff>Zenko_Age</hediff>
+			</li>
+			<li Class="Zenko.HediffGiver_ZenkoPsi" MayRequire="Ludeon.RimWorld.Royalty">
+				<hediff>PsychicAmplifier</hediff>
+				<partsToAffect><li>Brain</li></partsToAffect>
+			</li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+</Defs>
