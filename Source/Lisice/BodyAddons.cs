@@ -9,20 +9,24 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Verse;
 
-namespace Zenko
+namespace Lisice
     {
     [StaticConstructorOnStartup]
     public static class HarmonyLoader
         {
         static HarmonyLoader() 
             {
-            var harmony = new Harmony("princess.Zenko");
-            Log.Message("Zenko patching...");
+            var harmony = new Harmony("princess.Lisice");
+            Log.Message("Lisice patching...");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
+
+            var type = AccessTools.TypeByName("rjw.JobDriver_SexBaseInitiator");
+            if (type != null)
+                harmony.Patch(AccessTools.Method(type, "End"), postfix: new HarmonyMethod(typeof(Lisice_RJW_Support), "Postfix"));
             }
         }
     [HarmonyPatch(typeof(HarmonyPatches), "DrawAddonsFinalHook")]
-    public static class Zenko_HAR_DrawAddonsFinalHook 
+    public static class Lisice_HAR_DrawAddonsFinalHook 
         {
         static void Postfix(Pawn pawn, AlienPartGenerator.BodyAddon addon, ref float angle, ref Vector3 offsetVector) 
             {

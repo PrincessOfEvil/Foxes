@@ -10,17 +10,17 @@ using Verse;
 using Verse.AI.Group;
 using Verse.Sound;
 
-namespace Zenko
+namespace Lisice
     {
     [HarmonyPatch(typeof(Thing), "PreApplyDamage")]
-    public static class Zenko_Pawn_PreApplyDamage
+    public static class Lisice_Pawn_PreApplyDamage
 		{
 		static void Postfix(ref DamageInfo dinfo, ref bool absorbed, Thing __instance) 
             {
 			var pawn = __instance as Pawn;
 			if (pawn == null) return;
-			var ability = pawn.abilities?.GetAbility(ZenkoDefOf.Zenko_AbilityPsiShield);
-			// Log.Message(ZenkoDefOf.Zenko_AbilityPsiShield?.defName + ability?.def.defName + ability?.GizmoDisabled(out _).ToString() + pawn.psychicEntropy?.CurrentPsyfocus);
+			var ability = pawn.abilities?.GetAbility(LisiceDefOf.Lisice_AbilityPsiShield);
+			// Log.Message(LisiceDefOf.Lisice_AbilityPsiShield?.defName + ability?.def.defName + ability?.GizmoDisabled(out _).ToString() + pawn.psychicEntropy?.CurrentPsyfocus);
 			if (ability != null && ability.CooldownTicksTotal != ability.def.cooldownTicksRange.max && pawn.psychicEntropy.CurrentPsyfocus > 0)
                 {
 				// I could skip this copypaste with a transpiler, sure, but at what cost?

@@ -2,16 +2,16 @@
 <Defs>
 	<HediffDef>
 		<hediffClass>HediffWithComps</hediffClass>
-		<defName>Zenko_Age</defName>
-		<label>Zenko age</label>
-		<description>Changes to Zenko as they gain time and tails</description>
+		<defName>Lisice_Age</defName>
+		<label>Lisice age</label>
+		<description>Changes to Lisice as they gain time and tails</description>
 		<comps>
-			<li Class="Zenko.HediffCompProperties_Age">
-				<compClass>Zenko.HediffComp_Age</compClass>
+			<li Class="Lisice.HediffCompProperties_Age">
+				<compClass>Lisice.HediffComp_Age</compClass>
 				<ageDivisor>1000</ageDivisor>
 			</li>
 			<li Class="HediffCompProperties_GiveAbility" MayRequire="Ludeon.RimWorld.Royalty">
-				<abilityDef>Zenko_AbilityPsiShield</abilityDef>
+				<abilityDef>Lisice_AbilityPsiShield</abilityDef>
 			</li>
 		</comps>
 		<stages>
@@ -100,12 +100,12 @@
 	</HediffDef>
 
 	<HediffGiverSetDef>
-		<defName>ZenkoStandardAtlas</defName>
+		<defName>LisiceStandardAtlas</defName>
 		<hediffGivers>
-			<li Class="Zenko.HediffGiver_Zenko">
-				<hediff>Zenko_Age</hediff>
+			<li Class="Lisice.HediffGiver_Lisice">
+				<hediff>Lisice_Age</hediff>
 			</li>
-			<li Class="Zenko.HediffGiver_ZenkoPsi" MayRequire="Ludeon.RimWorld.Royalty">
+			<li Class="Lisice.HediffGiver_LisicePsi" MayRequire="Ludeon.RimWorld.Royalty">
 				<hediff>PsychicAmplifier</hediff>
 				<partsToAffect><li>Brain</li></partsToAffect>
 			</li>

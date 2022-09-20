@@ -7,7 +7,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace Zenko
+namespace Lisice
     {
     public class HediffComp_Age : HediffComp
         {
@@ -31,7 +31,7 @@ namespace Zenko
             }
         }
 
-    public class HediffGiver_Zenko : HediffGiver
+    public class HediffGiver_Lisice : HediffGiver
         {
         public override void OnIntervalPassed(Pawn pawn, Hediff cause)
             {
@@ -40,7 +40,7 @@ namespace Zenko
             TryApply(pawn);
             }
         }
-    public class HediffGiver_ZenkoPsi : HediffGiver
+    public class HediffGiver_LisicePsi : HediffGiver
         {
         public override void OnIntervalPassed(Pawn pawn, Hediff cause)
             {

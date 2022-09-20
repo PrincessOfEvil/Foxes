@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<PawnKindDef ParentName="RefugeeBase" MayRequire="Ludeon.RimWorld.Royalty">
-		<defName>Zenko_Refugee</defName>
+		<defName>Lisice_Refugee</defName>
 		<label>refugee</label>
 		<combatPower>40</combatPower>
 		<invNutrition>0</invNutrition>
@@ -13,7 +13,7 @@
 			<li>IndustrialBasic</li>
 		</apparelTags>
 		<specificApparelRequirements>
-			<li Class="Zenko.SpecificApparelRequirement_HairColored">
+			<li Class="Lisice.SpecificApparelRequirement_HairColored">
 				<stuff>Leather_Fox</stuff>
 			</li>
 		</specificApparelRequirements>
@@ -44,11 +44,11 @@
 		<initialResistanceRange>28~42</initialResistanceRange>
 	</PawnKindDef>
 	<PawnKindDef ParentName="SpaceRefugeeBase">
-		<defName>Zenko_SpaceRefugee</defName>
+		<defName>Lisice_SpaceRefugee</defName>
 		<label>space refugee</label>
 		<apparelMoney>0~1000</apparelMoney>
 		<specificApparelRequirements>
-			<li Class="Zenko.SpecificApparelRequirement_HairColored">
+			<li Class="Lisice.SpecificApparelRequirement_HairColored">
 				<stuff>Leather_Fox</stuff>
 			</li>
 		</specificApparelRequirements>
@@ -57,7 +57,7 @@
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="OutlanderBase">
-		<defName>Zenko_Villager</defName>
+		<defName>Lisice_Villager</defName>
 		<label>villager</label>
 		<combatPower>50</combatPower>
 		<itemQuality>Poor</itemQuality>
@@ -71,7 +71,7 @@
 		<apparelMoney>200~400</apparelMoney>
 		<apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
 		<specificApparelRequirements>
-			<li Class="Zenko.SpecificApparelRequirement_HairColored">
+			<li Class="Lisice.SpecificApparelRequirement_HairColored">
 				<stuff>Leather_Fox</stuff>
 			</li>
 		</specificApparelRequirements>
@@ -87,18 +87,18 @@
 	</PawnKindDef>
 
 	<AlienRace.RaceSettings>
-		<defName>Zenko_AlienRaceSettings</defName>
+		<defName>Lisice_AlienRaceSettings</defName>
 		<pawnKindSettings>
 			<alienrefugeekinds>
 				<li MayRequire="Ludeon.RimWorld.Royalty">
 					<kindDefs>
-						<li>Zenko_Refugee</li>
+						<li>Lisice_Refugee</li>
 					</kindDefs>
 					<chance>0.5</chance>
 				</li>
 				<li>
 					<kindDefs>
-						<li>Zenko_SpaceRefugee</li>
+						<li>Lisice_SpaceRefugee</li>
 					</kindDefs>
 					<chance>0.5</chance>
 				</li>
@@ -109,7 +109,7 @@
 					<pawnKindEntries>
 						<li>
 							<kindDefs>
-								<li>Zenko_Colonist</li>
+								<li>Lisice_Colonist</li>
 							</kindDefs>
 							<chance>0.5</chance>
 						</li>
@@ -125,7 +125,7 @@
 					<pawnKindEntries>
 						<li>
 							<kindDefs>
-								<li>Zenko_Villager</li>
+								<li>Lisice_Villager</li>
 							</kindDefs>
 						<chance>0.5</chance>
 						</li>

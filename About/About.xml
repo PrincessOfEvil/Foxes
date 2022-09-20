@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ModMetaData>
-	<name>Zenko</name>
+	<name>Lisice</name>
 	<author>Princess of Evil</author>
 	<supportedVersions>
 		<li>1.3</li>
 	</supportedVersions>
-	<packageId>princess.Zenko</packageId>
+	<packageId>princess.Lisice</packageId>
 	<description>
-Adds Zenko: magical multitailed fox people.
+Adds Lisice: magical multitailed fox people.
 	</description>
 	<modDependencies>
 		<li>

@@ -3,7 +3,7 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/FactionDef[defName = "Empire"]/permanentEnemyToEveryoneExcept</xpath>
 		<value>
-			<li>Zenko_PlayerColony</li>
+			<li>Lisice_PlayerColony</li>
 		</value>
 	</Operation>
 </Patch>

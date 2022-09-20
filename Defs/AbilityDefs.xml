@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<AbilityDef>
-		<defName>Zenko_AbilityPsiShield</defName>
+		<defName>Lisice_AbilityPsiShield</defName>
 		<label>illusory shield</label>
 		<description>A mix of skipshields, subtle mental commands and just luck. Psycosts are per point of damage. Click to switch on/off.</description>
-		<gizmoClass>Zenko.Command_ActuallyToggle</gizmoClass>
-		<iconPath>Zenko_PsiShield</iconPath>
+		<gizmoClass>Lisice.Command_ActuallyToggle</gizmoClass>
+		<iconPath>Lisice_PsiShield</iconPath>
 		<cooldownTicksRange>40~42</cooldownTicksRange>
 		<statBases>
 			<Ability_EntropyGain>1</Ability_EntropyGain>

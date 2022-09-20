@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 	<FactionDef ParentName="PlayerFactionBase">
-		<defName>Zenko_PlayerColony</defName>
-		<label>New Arrivals (Zenko)</label>
+		<defName>Lisice_PlayerColony</defName>
+		<label>New Arrivals (Lisice)</label>
 		<description>A colony of recently-arrived off-worlders.</description>
 
 		<isPlayer>true</isPlayer>
-		<basicMemberKind>Zenko_Colonist</basicMemberKind>
+		<basicMemberKind>Lisice_Colonist</basicMemberKind>
 		<pawnSingular>colonist</pawnSingular>
 		<pawnsPlural>colonists</pawnsPlural>
 
@@ -42,9 +42,9 @@
 	</FactionDef>
 
 	<PawnKindDef ParentName="BasePlayerPawnKind">
-		<defName>Zenko_Colonist</defName>
+		<defName>Lisice_Colonist</defName>
 		<label>Colonist</label>
-		<race>Zenko_Race</race>
+		<race>Lisice_Race</race>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>
 		<apparelTags>
@@ -53,7 +53,7 @@
 		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
 		<apparelMoney>350~600</apparelMoney>
 		<specificApparelRequirements>
-			<li Class="Zenko.SpecificApparelRequirement_HairColored">
+			<li Class="Lisice.SpecificApparelRequirement_HairColored">
 				<stuff>Leather_Fox</stuff>
 			</li>
 		</specificApparelRequirements>
@@ -65,9 +65,9 @@
 	</PawnKindDef>
 	
 	<AlienRace.ThingDef_AlienRace ParentName="HumanRace">
-		<defName>Zenko_Race</defName>
-		<label>zenko</label>
-		<description>Zenko are a race related to the Revia. However, instead of draining the blood of their enemies, they collect finer energies.</description>
+		<defName>Lisice_Race</defName>
+		<label>lisice</label>
+		<description>Lisice are a race related to the Revia. However, instead of draining the blood of their enemies, they collect finer energies.</description>
 		
 		<statBases>
 			<MoveSpeed>5.2</MoveSpeed>
@@ -90,7 +90,7 @@
 				</points>
 			</ageGenerationCurve>
 			<hediffGiverSets>
-				<li>ZenkoStandardAtlas</li>
+				<li>LisiceStandardAtlas</li>
 			</hediffGiverSets>
 			<baseHealthScale>0.8</baseHealthScale>
 		</race>
@@ -214,30 +214,30 @@
 					<bodyAddons>
 						<li>
 							<!-- Tail 0+ -->
-							<path>Zenko_tail</path>
+							<path>Lisice_tail</path>
 							<colorChannel>hair</colorChannel>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>false</drawnInBed>
 							<drawSize>(1.2,1.2)</drawSize>
 							<shaderType>CutoutComplex</shaderType>
 							<offsets>
-								<north Class="Zenko.RotationOffset">
+								<north Class="Lisice.RotationOffset">
 									<!-- 180 - 69 -->
 									<angle>111</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</north>
-								<south Class="Zenko.RotationOffset">
+								<south Class="Lisice.RotationOffset">
 									<angle>111</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</south>
-								<east Class="Zenko.RotationOffset">
+								<east Class="Lisice.RotationOffset">
 									<offset>( 0.22,	-0.33)</offset>
 								</east>
 							</offsets>
 						</li>
-						<li Class="Zenko.BodyAddon">
+						<li Class="Lisice.BodyAddon">
 							<!-- Tail 100+ -->
-							<path>Zenko_tail</path>
+							<path>Lisice_tail</path>
 							<colorChannel>hair</colorChannel>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>false</drawnInBed>
@@ -245,28 +245,28 @@
 							<shaderType>CutoutComplex</shaderType>
 							<minAge>100</minAge>
 							<offsets>
-								<north Class="Zenko.RotationOffset">
+								<north Class="Lisice.RotationOffset">
 									<!-- 111 - 27-->
 									<angle>84</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</north>
-								<south Class="Zenko.RotationOffset">
+								<south Class="Lisice.RotationOffset">
 									<angle>84</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</south>
-								<west Class="Zenko.RotationOffset">
+								<west Class="Lisice.RotationOffset">
 									<angle>-72</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</west>
-								<east Class="Zenko.RotationOffset">
+								<east Class="Lisice.RotationOffset">
 									<angle> 72</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</east>
 							</offsets>
 						</li>
-						<li Class="Zenko.BodyAddon">
+						<li Class="Lisice.BodyAddon">
 							<!-- Tail 200+ -->
-							<path>Zenko_tail</path>
+							<path>Lisice_tail</path>
 							<colorChannel>hair</colorChannel>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>false</drawnInBed>
@@ -274,28 +274,28 @@
 							<shaderType>CutoutComplex</shaderType>
 							<minAge>200</minAge>
 							<offsets>
-								<north Class="Zenko.RotationOffset">
+								<north Class="Lisice.RotationOffset">
 									<!-- 111 + 27-->
 									<angle>138</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</north>
-								<south Class="Zenko.RotationOffset">
+								<south Class="Lisice.RotationOffset">
 									<angle>138</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</south>
-								<west Class="Zenko.RotationOffset">
+								<west Class="Lisice.RotationOffset">
 									<angle>-36</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</west>
-								<east Class="Zenko.RotationOffset">
+								<east Class="Lisice.RotationOffset">
 									<angle> 36</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</east>
 							</offsets>
 						</li>
-						<li Class="Zenko.BodyAddon">
+						<li Class="Lisice.BodyAddon">
 							<!-- Tail 300+ -->
-							<path>Zenko_tail</path>
+							<path>Lisice_tail</path>
 							<colorChannel>hair</colorChannel>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>false</drawnInBed>
@@ -303,28 +303,28 @@
 							<shaderType>CutoutComplex</shaderType>
 							<minAge>300</minAge>
 							<offsets>
-								<north Class="Zenko.RotationOffset">
+								<north Class="Lisice.RotationOffset">
 									<!-- 111 - 27 * 2-->
 									<angle>57</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</north>
-								<south Class="Zenko.RotationOffset">
+								<south Class="Lisice.RotationOffset">
 									<angle>57</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</south>
-								<west Class="Zenko.RotationOffset">
+								<west Class="Lisice.RotationOffset">
 									<angle>-96</angle>
 									<offset>( 0.22, -0.33)</offset>
 								</west>
-								<east Class="Zenko.RotationOffset">
+								<east Class="Lisice.RotationOffset">
 									<angle> 96</angle>
 									<offset>( 0.22, -0.33)</offset>
 								</east>
 							</offsets>
 						</li>
-						<li Class="Zenko.BodyAddon">
+						<li Class="Lisice.BodyAddon">
 							<!-- Tail 400+ -->
-							<path>Zenko_tail</path>
+							<path>Lisice_tail</path>
 							<colorChannel>hair</colorChannel>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>false</drawnInBed>
@@ -332,28 +332,28 @@
 							<shaderType>CutoutComplex</shaderType>
 							<minAge>400</minAge>
 							<offsets>
-								<north Class="Zenko.RotationOffset">
+								<north Class="Lisice.RotationOffset">
 									<!-- 111 + 27 * 2-->
 									<angle>165</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</north>
-								<south Class="Zenko.RotationOffset">
+								<south Class="Lisice.RotationOffset">
 									<angle>165</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</south>
-								<west Class="Zenko.RotationOffset">
+								<west Class="Lisice.RotationOffset">
 									<angle>-24</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</west>
-								<east Class="Zenko.RotationOffset">
+								<east Class="Lisice.RotationOffset">
 									<angle> 24</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</east>
 							</offsets>
 						</li>
-						<li Class="Zenko.BodyAddon">
+						<li Class="Lisice.BodyAddon">
 							<!-- Tail 500+ -->
-							<path>Zenko_tail</path>
+							<path>Lisice_tail</path>
 							<colorChannel>hair</colorChannel>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>false</drawnInBed>
@@ -361,28 +361,28 @@
 							<shaderType>CutoutComplex</shaderType>
 							<minAge>500</minAge>
 							<offsets>
-								<north Class="Zenko.RotationOffset">
+								<north Class="Lisice.RotationOffset">
 									<!-- 111 - 27 * 3-->
 									<angle>30</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</north>
-								<south Class="Zenko.RotationOffset">
+								<south Class="Lisice.RotationOffset">
 									<angle>30</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</south>
-								<west Class="Zenko.RotationOffset">
+								<west Class="Lisice.RotationOffset">
 									<angle>-48</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</west>
-								<east Class="Zenko.RotationOffset">
+								<east Class="Lisice.RotationOffset">
 									<angle> 48</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</east>
 							</offsets>
 						</li>
-						<li Class="Zenko.BodyAddon">
+						<li Class="Lisice.BodyAddon">
 							<!-- Tail 600+ -->
-							<path>Zenko_tail</path>
+							<path>Lisice_tail</path>
 							<colorChannel>hair</colorChannel>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>false</drawnInBed>
@@ -390,28 +390,28 @@
 							<shaderType>CutoutComplex</shaderType>
 							<minAge>600</minAge>
 							<offsets>
-								<north Class="Zenko.RotationOffset">
+								<north Class="Lisice.RotationOffset">
 									<!-- 111 + 27 * 3-->
 									<angle>192</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</north>
-								<south Class="Zenko.RotationOffset">
+								<south Class="Lisice.RotationOffset">
 									<angle>192</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</south>
-								<west Class="Zenko.RotationOffset">
+								<west Class="Lisice.RotationOffset">
 									<angle>-12</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</west>
-								<east Class="Zenko.RotationOffset">
+								<east Class="Lisice.RotationOffset">
 									<angle> 12</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</east>
 							</offsets>
 						</li>
-						<li Class="Zenko.BodyAddon">
+						<li Class="Lisice.BodyAddon">
 							<!-- Tail 700+ -->
-							<path>Zenko_tail</path>
+							<path>Lisice_tail</path>
 							<colorChannel>hair</colorChannel>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>false</drawnInBed>
@@ -419,28 +419,28 @@
 							<shaderType>CutoutComplex</shaderType>
 							<minAge>700</minAge>
 							<offsets>
-								<north Class="Zenko.RotationOffset">
+								<north Class="Lisice.RotationOffset">
 									<!-- 111 - 27 * 4-->
 									<angle>3</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</north>
-								<south Class="Zenko.RotationOffset">
+								<south Class="Lisice.RotationOffset">
 									<angle>3</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</south>
-								<west Class="Zenko.RotationOffset">
+								<west Class="Lisice.RotationOffset">
 									<angle>-60</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</west>
-								<east Class="Zenko.RotationOffset">
+								<east Class="Lisice.RotationOffset">
 									<angle> 60</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</east>
 							</offsets>
 						</li>
-						<li Class="Zenko.BodyAddon">
+						<li Class="Lisice.BodyAddon">
 							<!-- Tail 800+ -->
-							<path>Zenko_tail</path>
+							<path>Lisice_tail</path>
 							<colorChannel>hair</colorChannel>
 							<scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
 							<drawnInBed>false</drawnInBed>
@@ -448,20 +448,20 @@
 							<shaderType>CutoutComplex</shaderType>
 							<minAge>800</minAge>
 							<offsets>
-								<north Class="Zenko.RotationOffset">
+								<north Class="Lisice.RotationOffset">
 									<!-- 111 + 27 * 4-->
 									<angle>219</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</north>
-								<south Class="Zenko.RotationOffset">
+								<south Class="Lisice.RotationOffset">
 									<angle>219</angle>
 									<offset>( 0.00, -0.33)</offset>
 								</south>
-								<west Class="Zenko.RotationOffset">
+								<west Class="Lisice.RotationOffset">
 									<angle>-84</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</west>
-								<east Class="Zenko.RotationOffset">
+								<east Class="Lisice.RotationOffset">
 									<angle> 84</angle>
 									<offset>( 0.22,	-0.33)</offset>
 								</east>
@@ -485,7 +485,7 @@
 								<options>
 									<li><only>(233, 233, 233)</only></li> <!-- Arctic -->
 									<li><only>(178, 100,  34)</only></li> <!-- Red -->
-									<li><only>(70,   70,  70)</only></li> <!-- Red -->
+									<li><only>( 70,  70,  70)</only></li> <!-- Black -->
 									<li><only>(202, 167, 106)</only></li> <!-- Fennec -->
 								</options>
 							</first>
@@ -498,7 +498,7 @@
 			</generalSettings>
 		</alienRace>
 		<modExtensions>
-			<li Class="Zenko.DefExtension_GainsPsyfocusFromLovin" MayRequire="Ludeon.RimWorld.Royalty" />
+			<li Class="Lisice.DefExtension_GainsPsyfocusFromLovin" MayRequire="Ludeon.RimWorld.Royalty" />
 		</modExtensions>
 	</AlienRace.ThingDef_AlienRace>
 </Defs>

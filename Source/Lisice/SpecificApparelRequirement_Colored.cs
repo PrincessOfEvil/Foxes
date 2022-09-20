@@ -7,14 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Verse;
 
-namespace Zenko
+namespace Lisice
     {
     public class SpecificApparelRequirement_HairColored : SpecificApparelRequirement
         {
         }
 
     [HarmonyPatch(typeof(PawnApparelGenerator), "PostProcessApparel")]
-    static class Zenko_PawnApparelGenerator_PostProcessApparel
+    static class Lisice_PawnApparelGenerator_PostProcessApparel
         {
         static void Postfix(ref Apparel apparel, ref Pawn pawn)
             {
@@ -27,7 +27,7 @@ namespace Zenko
         }
 
     [HarmonyPatch(typeof(PawnApparelGenerator), "CanUseStuff")]
-    static class Zenko_PawnApparelGenerator_CanUseStuff
+    static class Lisice_PawnApparelGenerator_CanUseStuff
         {
         static bool Postfix(bool ret, Pawn pawn, ThingStuffPair pair)
             {

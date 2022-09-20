@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4851D0A2-0DF3-464E-9479-3C4EEE9FCC94}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Zenko</RootNamespace>
-    <AssemblyName>Zenko</AssemblyName>
+    <RootNamespace>Lisice</RootNamespace>
+    <AssemblyName>Lisice</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -49,6 +49,10 @@
     </Reference>
     <Reference Include="HarmonyMod">
       <HintPath>..\..\..\2009463077\Current\Assemblies\HarmonyMod.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RJW">
+      <HintPath>..\..\..\rjw\1.3\Assemblies\RJW.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

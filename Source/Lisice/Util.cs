@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace Zenko
+namespace Lisice
     {
     public static class Util
         {
@@ -24,8 +24,8 @@ namespace Zenko
             }
         }
     [DefOf]
-    public static class ZenkoDefOf
+    public static class LisiceDefOf
         {
-        public static AbilityDef Zenko_AbilityPsiShield;
+        public static AbilityDef Lisice_AbilityPsiShield;
         }
     }
