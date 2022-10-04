@@ -39,20 +39,21 @@ namespace Lisice
 
     public static class Lisice_RJW_Support 
         {
-        public static void Postfix(JobDriver_SexBaseInitiator __instance) 
+        public static void Postfix(JobDriver __instance) 
             {
-            if (__instance.pawn?.HasModExtension<DefExtension_GainsPsyfocusFromLovin>() ^ __instance.Partner?.HasModExtension<DefExtension_GainsPsyfocusFromLovin>() ?? false)
-                {
-                Pawn pawn, part;
-                if (__instance.pawn.HasModExtension<DefExtension_GainsPsyfocusFromLovin>()) { pawn = __instance.pawn; part = __instance.Partner; }
-                else { pawn = __instance.Partner; part = __instance.pawn; }
-                pawn.psychicEntropy.OffsetPsyfocusDirectly(pawn.GetModExtension<DefExtension_GainsPsyfocusFromLovin>().psyfocusGain / 100f);
-                if (part.needs.rest != null)
-                    part.needs.rest.CurLevel -= pawn.GetModExtension<DefExtension_GainsPsyfocusFromLovin>().drain / 100;
-                else if (part.needs.food != null)
-                    part.needs.food.CurLevel -= pawn.GetModExtension<DefExtension_GainsPsyfocusFromLovin>().drain / 100;
+            if (__instance is JobDriver_SexBaseInitiator instance)
+                if (instance.pawn?.HasModExtension<DefExtension_GainsPsyfocusFromLovin>() ^ instance.Partner?.HasModExtension<DefExtension_GainsPsyfocusFromLovin>() ?? false)
+                    {
+                    Pawn pawn, part;
+                    if (instance.pawn.HasModExtension<DefExtension_GainsPsyfocusFromLovin>()) { pawn = instance.pawn; part = instance.Partner; }
+                    else { pawn = instance.Partner; part = instance.pawn; }
+                    pawn.psychicEntropy?.OffsetPsyfocusDirectly(pawn.GetModExtension<DefExtension_GainsPsyfocusFromLovin>().psyfocusGain / 100f);
+                    if (part.needs.rest != null)
+                        part.needs.rest.CurLevel -= pawn.GetModExtension<DefExtension_GainsPsyfocusFromLovin>().drain / 100;
+                    else if (part.needs.food != null)
+                        part.needs.food.CurLevel -= pawn.GetModExtension<DefExtension_GainsPsyfocusFromLovin>().drain / 100;
 
-                }
+                    }
             }
         }
     public class DefExtension_GainsPsyfocusFromLovin : DefModExtension
